@@ -56,7 +56,7 @@ class SalesProductController {
     return response.status(400).send({ message: 'Succefuly to update product sale!' })
   }
 
-  async destroy({ params, request }){
+  async destroy({ params, response }){
 
     let sale = await Sp.find(params.id)
     if(!sale){

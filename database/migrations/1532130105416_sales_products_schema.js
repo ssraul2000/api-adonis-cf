@@ -6,6 +6,7 @@ class SalesProductsSchema extends Schema {
   up () {
     this.create('sales_products', (table) => {
       table.increments()
+      table.date('date').notNullable()
       table
         .integer('sale_id')
         .references('id')
